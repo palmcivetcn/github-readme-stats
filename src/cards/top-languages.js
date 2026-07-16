@@ -673,8 +673,8 @@ const createDonutPaths = (cx, cy, radius, percentages) => {
  */
 const renderDonutLayout = (langs, width, totalLanguageSize, statsFormat) => {
   const centerX = width / 3;
-  const centerY = width / 3;
-  const radius = centerX - 60;
+  const centerY = Math.min(width / 3, 115);
+  const radius = Math.min(centerX - 60, 75);
   const strokeWidth = 12;
 
   const colors = langs.map((lang) => lang.color);
