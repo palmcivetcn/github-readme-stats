@@ -939,7 +939,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
   }
 
   return card.render(`
-    <svg data-testid="lang-items" x="${CARD_PADDING}">
+    <svg data-testid="lang-items" x="${CARD_PADDING}" overflow="${layout === "donut" ? "visible" : "hidden"}">
       ${finalLayout}
     </svg>
   `);
